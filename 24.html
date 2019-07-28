@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>画大神笑脸</title>
+</head>
+<body>
+    <style>
+        .loadPic{
+            background: url(a.jpg);
+            width: 480px;
+            height: 480px;
+            background-repeat: no-repeat;
+        }
+    </style>
+    <div class="loadPic"></div>
+    <script>
+        window.onload = function () {
+            var ani = document.getElementsByClassName("loadPic")[0];
+            var Y = 0;
+
+            function changePic() {
+
+                ani.style.backgroundPositionY = '-' + Y + 'px';
+                Y+=480;
+                 if(Y==8160){
+                    Y=0;
+                }
+            }
+            setInterval(changePic, 100);
+        }
+    </script>
+</body>
+</html>   

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>定时</title>
+</head>
+<body>
+    <input type="text" name="" id="clock" size="35">
+    <script>
+        var int=window.setInterval("clock()",50);
+        function clock(){
+            var t=new Date();
+            document.getElementById('clock').value=t;
+        }
+    </script>
+    <button onclick="int=window.clearInterval(int)"> stop </button>
+    <button onclick="int=window.setInterval('clock()',50)">begin</button>
+</body>
+</html>

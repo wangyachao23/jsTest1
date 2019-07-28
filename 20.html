@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>控制元素的显示及隐藏</title>
+    <style>
+        select {
+            display: none;
+        }
+        .sty{
+            display: block;
+        }
+        .nonsty{
+            display: none;
+        }
+    </style>
+</head>
+<body>            
+    <label>
+        <input id="school" name="status" type="radio" onclick="choseSch()">
+        School
+    </label>
+    <label>
+        <input id="company" name="status" type="radio" onclick="choseCompany()">
+        Company
+    </label>
+
+    <select id="school-select" >        
+        <option>北京邮电大学</option>
+        <option>黑龙江大学</option>
+        <option>华中科技大学</option>
+    </select>
+
+    <select id="company-select" >        
+        <option>百度</option>
+        <option>爱奇艺</option>        
+    </select>
+    <script>
+        function choseSch(){
+            var x= document.getElementById('school-select');
+            var y=document.getElementById('company-select');
+            x.className="sty";
+            y.className="nonsty";
+        }
+        function choseCompany(){
+            var x= document.getElementById('school-select');
+            var y=document.getElementById('company-select');
+            y.className="sty";
+            x.className="nonsty";
+        }
+    </script>
+</body>
+</html>
