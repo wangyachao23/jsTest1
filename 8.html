@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    p{
+        font-family: "微软雅黑";
+    }
+    </style>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+    var cats=['one','two','three','four','five'];
+    var info="hello my cats:";
+    var para=document.querySelector('p');
+
+    for(let i=0;i<cats.length;i++){
+        if(i===cats.length-1){
+            info+='and'+' '+cats[i]+'.';
+        }
+        else{
+            info+=cats[i]+',';
+        }
+        
+    }
+
+    para.textContent=info;
+    </script>
+ 
+</body>
+</html>

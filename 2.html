@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>if练习</h3>
+    <p>如果时间超过9:00点，显示“美好的一天！”</p>
+    <p id="demo">加油鸭！</p>
+    <script>
+        var hour=new Date().getHours();
+        var words;
+        if(hour<10){
+            words="早安，加油鸭！"
+        }
+        else if(hour<18){
+            words="lucky！"
+        }
+        else{
+            words="晚上好！"
+        }
+        document.getElementById('demo').innerHTML=words;
+    </script>
+</body>
+</html>

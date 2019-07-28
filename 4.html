@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>for</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        var a=["BMW", "Volvo", "porsche", "Ford", "Fiat", "Audi"];
+        var i=0;
+        var text="";
+    //     for(i=0;i<a.length;i++)
+    // {
+  
+    //     text+=a[i]+"<br/>";
+    // }
+    // for( i in a){
+    //     text+=a[i]+111+"<br/>"
+    // }
+    // while(i<10){
+    //     text+="数字为:"+i+"<br/>";
+    //     i++;
+    // }
+    for(;i<10;i++){
+        if(i==3){
+            continue;
+        }
+        text+="数字为："+i+"<br/>";
+    }
+    document.getElementById('demo').innerHTML=text;
+    </script>
+</body>
+</html>

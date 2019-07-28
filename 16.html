@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Random color example — event handler property</title>
+    <style>
+      button {
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Change color</button>
+    <script>
+      var btn = document.querySelector('button');
+      function random(number) {
+        return Math.floor(Math.random()*number);
+      }
+      function bgChange(e) {
+        var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        document.body.style.backgroundColor = rndCol;
+        console.log(e);
+      }
+      btn.addEventListener('click',bgChange)
+    //   btn.onclick = bgChange;    点击事件
+    //   btn.onfocus= bgChange;    颜色将于按钮被置于焦点或解除焦点时改变，下同
+    //   btn.onblur= bgChange;    
+    //   btn.ondblclick= bgChange;    双击事件
+    //  window.onkeydown= bgChange;   键盘任意键点击事件 类似还有window.onkeypress, window.onkeyup 
+    //   btn.onmouseover= bgChange;   btn.onmouseover 和 btn.onmouseout — 颜色将会在鼠标移入按钮上方时发生改变, 或者当它从按钮移出时.
+
+    </script>
+  </body>
+</html>

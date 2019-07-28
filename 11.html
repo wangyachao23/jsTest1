@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>来宾名单</title>
+</head>
+<body>
+    <div class="output"></div>
+    <div class="output1"></div>
+    <script>
+        var people=['zhangsan','lisi','wangwu','zhaoliu','laoer'];
+        var refuce=document.querySelector('.output');
+        var admin=document.querySelector('.output1');
+        refuce.textContent="Refuce: ";
+        admin.textContent="Admin: ";
+         for(var i=0;i<people.length;i++){
+            if(people[i]==='zhangsan'||people[i]==='lisi'){
+                refuce.textContent+=people[i]+',';
+            }
+            else{
+                admin.textContent+=people[i]+',';
+            }
+         }
+         refuce.textContent=refuce.textContent.slice(0,refuce.textContent.length-1)+'.';   
+         admin.textContent=admin.textContent.slice(0,admin.textContent.length-1)+'.';   
+    </script>
+</body>
+</html>

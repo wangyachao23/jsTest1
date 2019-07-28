@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <label for="search">Search by contact name:</label>
+    <input type="text" id="search">
+    <button>search</button>
+    <p></p>
+
+    <script>
+        var contacts=['zhangsan:123456','lisi:4561233','wangwu:789465'];
+        var para=document.querySelector('p');
+        var input=document.querySelector('input');
+        var btn=document.querySelector('button');
+        btn.addEventListener('click',function(){
+            var searchName=input.value;
+            input.value='';
+            input.focus();
+            for(var i=0;i<contacts.length;i++){
+                var searchContent=contacts[i].split(':');
+                if(searchContent[0]===searchName){
+                    para.textContent=searchContent[0]+'\'s number is '+searchContent[1]+'.';
+                    break;
+                }
+                else{
+                    para.textContent="cannot search!";
+                }
+            }
+          
+        })
+    </script>
+</body>
+</html>
