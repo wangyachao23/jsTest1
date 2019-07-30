@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>栈、队列</title>
+</head>
+<body>
+        <input id="queue-input" type="text">
+        <p id="queue-cont">队列内容：apple-&gt;pear</p>    
+        <button id="in-btn" onclick="aa()">入队</button>
+        <button id="out-btn" onclick="bb()">出队</button>
+        <button id="font-btn" onclick="cc()">打印队头元素内容</button>
+        <button id="empty-btn" onclick="dd()">判断队列是否为空</button>
+        
+        <script>
+        
+        var queue = ["apple", "pear"];
+        var a=document.getElementById('queue-input');
+        var t=document.getElementById('queue-cont');
+        function print(){
+            t.innerHTML=queue;
+        }
+        function aa(){
+            queue.push(a.value);
+            console.log("添加元素成功"+a.value);
+            print();
+        }
+        function bb(){
+            console.log("出队成功!"+queue.shift());
+            print();
+        }
+        function cc(){
+            console.log(queue[0]);
+            print();
+        }
+        function dd(){
+            if(queue[0]==null){
+                console.log("空");
+                print();
+            }
+            else{
+                console.log("不空");
+                print();
+            }
+        }
+        </script>
+        
+</body>
+</html>
