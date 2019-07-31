@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>倒计时，滴答滴答</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+    var t=new Date();
+    var y=t.getFullYear();
+    var m=t.getMonth()+1;
+    var d=t.getDate();
+    var h=t.getHours();
+    var mo=t.getMinutes();
+    var s=t.getSeconds();
+    var str;
+    function week(){
+        var a=new Array(7);
+       
+        a[0]="星期日";
+        a[1]="星期一";
+        a[2]="星期二";
+        a[3]="星期三";
+        a[4]="星期四";
+        a[5]="星期五";
+        a[6]="星期六";
+        return a[t.getDay()];
+    }
+    function week1(){
+        var b=new Array(7);
+        b[0]="Sunday";
+        b[1]="Monday";
+        b[2]="Tuesday";
+        b[3]="Wednesday";
+        b[4]="Thursday";
+        b[5]="Friday";
+        b[6]="Saturday";
+        return b[t.getDay()];
+    }
+    function time(){
+        var i=h+":"+mo+":"+s;
+        return i;
+    }
+    function change(){
+        if(m<10){
+            m="0"+m;
+        }
+        if(d<10){
+            d="0"+d;
+        }
+        if(h<10){
+            h="0"+h;
+        }
+        if(mo<10){
+            mo="0"+mo;
+         }
+         if(s<10){
+             s="0"+s;
+         }
+
+    }
+    function change1(){
+        if(h<12)
+         {
+            str=" AM";
+         }
+         else if(h>=12)
+         {
+             h-=12;
+             str=" PM";
+         }
+    }
+    change();
+    function lastTime(){
+    document.getElementById('demo').innerHTML=y+" 年 "+m+" 月 "+d+" 日 "+week()+" "+time() ;
+    change1();
+    document.getElementById('demo1').innerHTML=y+"-"+m+"-"+d+" "+week1()+" "+time()+str;
+    }
+    
+    lastTime();
+    </script>
+   
+</body>
+</html>
